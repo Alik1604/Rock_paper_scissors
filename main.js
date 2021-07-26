@@ -5,8 +5,9 @@ let ComputerChoise2
 let battleScore1 = 0;
 let battleScore2 = 0;
 let PlayerChoise = "Rock"; 
-while (battleScore1 < 5 || battleScore2 < 5) {
-//PlayerChoise = prompt("Enter your choise",);
+let Pattern = false;
+while (Pattern == false) {
+PlayerChoise = prompt("Enter your choise",);
 ComputerChoise = Math.floor(Math.random() * (max - min) ) + min;
 if (ComputerChoise === 1){
     ComputerChoise2 = "Rock";
@@ -33,6 +34,9 @@ battleScore1 += 1;
 }else if(PlayerChoise === "Scissors" && ComputerChoise2 === "Rock"){
 battleScore2 += 1; 
 } 
+if(battleScore1 == 5 || battleScore2 == 5){
+Pattern = true;
+}
 console.log("CPU", battleScore2)
 console.log("You", battleScore1)
 } 
