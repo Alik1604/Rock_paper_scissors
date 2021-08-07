@@ -1,0 +1,12 @@
+h1{
+    display:flex;
+    justify-content:center;
+}
+#container{
+    margin-top: 7rem;
+    display:flex;
+    justify-content:center;
+}
+.choice{
+    margin: 50px;
+}
