@@ -58,6 +58,3 @@ buttons.forEach( button => button.addEventListener('click', () => {
     }
     return battleScore1, battleScore2
 }))
-
-    
-
