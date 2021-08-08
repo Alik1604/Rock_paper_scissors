@@ -3,15 +3,19 @@ h1{
     justify-content:center;
 }
 h2{
-    display:block;
-    width: 30px;
-    
+    display:flex;
+    height: 30px;
+    justify-content:center;
 }
 #container{
-    margin-top: 7rem;
+    margin-top: rem;
     display:flex;
     justify-content:center;
 }
 .choice{
     margin: 50px;
+}
+#score{
+    display: flex;
+    justify-content: center;
 }
