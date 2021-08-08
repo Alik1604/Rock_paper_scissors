@@ -1,12 +1,12 @@
 const max = 4;
 const min = 1;
+let ComputerChoise 
+let ComputerChoise2
+let battleScore1 = 0;
+let battleScore2 = 0;
 const buttons = document.querySelectorAll('button');
 buttons.forEach( button => button.addEventListener('click', () => {
     let PlayerChoise = button.id;
-    let ComputerChoise 
-    let ComputerChoise2
-    let battleScore1 = 0;
-    let battleScore2 = 0;
     let gameResultText = document.querySelector('h2');
     let Score = document.querySelector('h3')
     ComputerChoise = Math.floor(Math.random() * (max - min) ) + min;
@@ -17,7 +17,6 @@ buttons.forEach( button => button.addEventListener('click', () => {
     }else if ( ComputerChoise === 3){
         ComputerChoise2 = "Scissors";
     }
-
     if (PlayerChoise == ComputerChoise2){
         gameResultText.textContent = 'Tie'
         Score.textContent = battleScore1+' : '+battleScore2;
@@ -46,13 +45,19 @@ buttons.forEach( button => button.addEventListener('click', () => {
         gameResultText.textContent = 'Lose'
         Score.textContent = battleScore1+' : '+battleScore2;
     } 
-    
+    if (battleScore1 == 5 ){
+        gameResultText.textContent = 'Great job!'   
+    } 
+    if (battleScore2 == 5){
+        gameResultText.textContent = 'Don`t worry, try again!'
+    }
+    if(battleScore1 == 5 || battleScore2 == 5){
+        battleScore1 = 0;
+        battleScore2 = 0;
+        Score.textContent = battleScore1+' : '+battleScore2;
+    }
     return battleScore1, battleScore2
 }))
 
-console.log(battleScore1,battleScore2)
-
-//if(battleScore1 == 5 || battleScore2 == 5){
-//Pattern = true;
-//}
+    
 
