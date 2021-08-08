@@ -5,7 +5,9 @@ let ComputerChoise2
 let battleScore1 = 0;
 let battleScore2 = 0;
 const buttons = document.querySelectorAll('button');
-buttons.forEach( button => button.addEventListener('click', () => {
+buttons.forEach( button => button.addEventListener('click', playRaund));
+function playRaund (event){
+    let button = event.currentTarget;
     let PlayerChoise = button.id;
     let gameResultText = document.querySelector('h2');
     let Score = document.querySelector('h3')
@@ -57,4 +59,6 @@ buttons.forEach( button => button.addEventListener('click', () => {
         Score.textContent = battleScore1+' : '+battleScore2;
     }
     return battleScore1, battleScore2
-}))
+} 
+   
+    
